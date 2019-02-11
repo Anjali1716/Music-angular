@@ -1,0 +1,25 @@
+<header>
+  <nav>
+    <mat-toolbar color="warn">
+      <mat-toolbar-row>
+          <div class="navbar-header">  
+              <img src="../assets/img3.jpg" class="img-rounded" alt="abc" width="80px" height="70px">
+              </div>
+        <span id="branding" [routerLink]="['/']">MusiC</span>
+        <section class="txt-center">
+          <mat-chip-list>
+            <mat-chip color="warn" class="navLinks" selected [routerLink]="['/home']" >Home</mat-chip>
+            <mat-icon class="pipes">remove</mat-icon>
+            <mat-chip color="warn" class="navLinks" selected [routerLink]="['/playlist']">Playlist</mat-chip>
+          </mat-chip-list>
+        </section>
+        <mat-form-field appearance="outline">
+            <mat-label>Search</mat-label>
+            <input matInput placeholder="Enter Track Name" (input)="search($event.target.value)">
+            <mat-icon matSuffix>search</mat-icon>
+          
+        </mat-form-field>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </nav>
+</header>
